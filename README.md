@@ -2,6 +2,8 @@
 
 [![Smmry](http://smmry.com/sm_images/sm_logo.png)](http://smmry.com/)
 
+[![Build Status](https://travis-ci.org/FaruhNarzullaev/smmry.svg?branch=v1.0.0)](https://travis-ci.org/FaruhNarzullaev/smmry)
+
 ### Installing via Composer
 
 The recommended way to install Smmry PHP Client is through
