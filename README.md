@@ -1,29 +1,38 @@
 # Smmry PHP Client
 
-[![Smmry](http://smmry.com/sm_images/sm_logo.png)](http://smmry.com/)
+By Faruh Narzullaev
 
-[![Build Status](https://travis-ci.org/FaruhNarzullaev/smmry.svg?branch=v1.0.0)](https://travis-ci.org/FaruhNarzullaev/smmry)
+[![Build Status](https://travis-ci.org/FaruhNarzullaev/smmry.svg?branch=master)](https://travis-ci.org/FaruhNarzullaev/smmry)
+
+[![Smmry](http://smmry.com/sm_images/sm_logo.png)](http://smmry.com/)
 
 ### Installing via Composer
 
-The recommended way to install Smmry PHP Client is through
-[Composer](http://getcomposer.org).
-
-```bash
-# Install Composer
-curl -sS https://getcomposer.org/installer | php
-```
-
-Next, run the composer command to install the latest stable version of Smmry PHP Client:
+The recommended way to install Smmry PHP Client is through [Composer](http://getcomposer.org).
 
 ```bash
 composer require faruh/smmry
 ```
 
-After installing, you need to require Composer's autoloader:
+## Usage
 
 ```php
-require_once 'vendor/autoload.php';
+<?php
+    require 'vendor/autoload.php';
+
+    use Faruh\Smmry\SmmryClient;
+
+    $client = new SmmryClient([
+        'sm_api_key'       => 'API_KEY',
+        'sm_length'        => 7,
+        'sm_keyword_count' => 2
+    ]);
+
+    $result = $client
+    	->strategy('url')
+    	->setResource('http://randomtextgenerator.com/')
+    	->summarize();
+
+    dump($result);
 ```
 
-### Documentation
