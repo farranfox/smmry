@@ -1,8 +1,6 @@
-# Smmry PHP Client
+# Smmry PHP Client [![Build Status](https://travis-ci.org/FaruhNarzullaev/smmry.svg?branch=master)](https://travis-ci.org/FaruhNarzullaev/smmry)
 
 By Faruh Narzullaev
-
-[![Build Status](https://travis-ci.org/FaruhNarzullaev/smmry.svg?branch=master)](https://travis-ci.org/FaruhNarzullaev/smmry)
 
 [![Smmry](http://smmry.com/sm_images/sm_logo.png)](http://smmry.com/)
 
@@ -18,8 +16,6 @@ composer require faruh/smmry
 
 ```php
 <?php
-    require 'vendor/autoload.php';
-
     use Faruh\Smmry\SmmryClient;
 
     $client = new SmmryClient([
@@ -32,7 +28,8 @@ composer require faruh/smmry
     	->strategy('url')
     	->setResource('http://randomtextgenerator.com/')
     	->summarize();
-
-    dump($result);
 ```
 
+Go to http://smmry.com/partner to obtain your key.
+
+Documentation: http://smmry.com/api
